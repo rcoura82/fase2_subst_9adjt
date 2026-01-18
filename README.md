@@ -290,7 +290,7 @@ Este projeto está sob a licença MIT.
 
 ## 👤 Autor
 
-**Raphael Coura**
+**Ricardo Coura**
 - GitHub: [@rcoura82](https://github.com/rcoura82)
 - Projeto: [fase2_subst_9adjt](https://github.com/rcoura82/fase2_subst_9adjt)
 
