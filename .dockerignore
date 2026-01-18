@@ -1,0 +1,44 @@
+# .dockerignore - Arquivos a serem ignorados ao construir a imagem Docker
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Maven
+target/
+.m2/
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+*.iws
+*.ipr
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Variáveis de ambiente
+.env
+.env.local
+
+# Documentação
+docs/
+README.md
+
+# Testes
+src/test/
+
+# Node (se houver)
+node_modules/
+npm-debug.log

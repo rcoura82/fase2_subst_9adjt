@@ -1,0 +1,85 @@
+version: '3.8'
+
+services:
+  # Banco de dados PostgreSQL
+  postgres:
+    image: postgres:15-alpine
+    container_name: biblioteca-postgres
+    environment:
+      POSTGRES_DB: biblioteca_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      PGDATA: /var/lib/postgresql/data/pgdata
+      TZ: America/Sao_Paulo
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - biblioteca-network
+    restart: unless-stopped
+
+  # Aplicação Biblioteca Online
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: biblioteca-app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/biblioteca_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres123
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.postgresql.Driver
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.PostgreSQLDialect
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_PROFILES_ACTIVE: production
+      JAVA_OPTS: "-Xms512m -Xmx1024m -XX:+UseG1GC"
+      TZ: America/Sao_Paulo
+      SERVER_PORT: 8080
+      SERVER_SERVLET_CONTEXT_PATH: /api
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/livros"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - biblioteca-network
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
+
+  # PhpPgAdmin para administração do banco (opcional)
+  phppgadmin:
+    image: phppgadmin:latest
+    container_name: biblioteca-pgadmin
+    environment:
+      PHP_PG_ADMIN_POSGRES_HOST: postgres
+      PHP_PG_ADMIN_POSGRES_PORT: 5432
+      PHP_PG_ADMIN_POSGRES_USER: postgres
+      PHP_PG_ADMIN_POSGRES_PASSWORD: postgres123
+    ports:
+      - "8081:80"
+    depends_on:
+      - postgres
+    networks:
+      - biblioteca-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  biblioteca-network:
+    driver: bridge
