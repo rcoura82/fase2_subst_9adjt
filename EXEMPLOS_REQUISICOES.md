@@ -35,8 +35,8 @@ Content-Type: application/json
   "categoria": "Programação",
   "copiasDisponiveis": 3,
   "copiasTotais": 5,
-  "dataCriacao": "2024-01-18T10:30:00",
-  "dataAtualizacao": "2024-01-18T10:30:00"
+  "dataCriacao": "2026-01-18T10:30:00",
+  "dataAtualizacao": "2026-01-18T10:30:00"
 }
 ```
 
@@ -122,8 +122,8 @@ Content-Type: application/json
   "tipoUsuario": "ALUNO",
   "ativo": true,
   "limiteEmprestimos": 5,
-  "dataCriacao": "2024-01-18T10:25:00",
-  "dataAtualizacao": "2024-01-18T10:25:00"
+  "dataCriacao": "2026-01-18T10:25:00",
+  "dataAtualizacao": "2026-01-18T10:25:00"
 }
 ```
 
@@ -211,8 +211,8 @@ Content-Type: application/json
   "id": 1,
   "livroId": 1,
   "usuarioId": 1,
-  "dataEmprestimo": "2024-01-18",
-  "dataDeVolucaoPrevista": "2024-02-01",
+  "dataEmprestimo": "2026-01-18",
+  "dataDeVolucaoPrevista": "2026-02-01",
   "dataDeVolucaoReal": null,
   "status": "ATIVO",
   "observacoes": null,
@@ -247,12 +247,12 @@ GET /api/emprestimos/livro/1?page=0&size=10
 
 ### 7. Empréstimos por Período
 ```http
-GET /api/emprestimos/periodo?dataInicio=2024-01-01&dataFim=2024-01-31&page=0&size=10
+GET /api/emprestimos/periodo?dataInicio=2026-01-01&dataFim=2026-01-31&page=0&size=10
 ```
 
 ### 8. Histórico de Empréstimos do Usuário
 ```http
-GET /api/emprestimos/usuario/1/historico?dataInicio=2024-01-01&dataFim=2024-01-31
+GET /api/emprestimos/usuario/1/historico?dataInicio=2026-01-01&dataFim=2026-01-31
 ```
 
 ### 9. Empréstimos Ativos do Usuário
@@ -271,9 +271,9 @@ PATCH /api/emprestimos/1/devolver
   "id": 1,
   "livroId": 1,
   "usuarioId": 1,
-  "dataEmprestimo": "2024-01-18",
-  "dataDeVolucaoPrevista": "2024-02-01",
-  "dataDeVolucaoReal": "2024-01-20",
+  "dataEmprestimo": "2026-01-18",
+  "dataDeVolucaoPrevista": "2026-02-01",
+  "dataDeVolucaoReal": "2026-01-20",
   "status": "DEVOLVIDO",
   "observacoes": null,
   "diasAtrasados": 0
@@ -291,8 +291,8 @@ PATCH /api/emprestimos/1/renovar
   "id": 1,
   "livroId": 1,
   "usuarioId": 1,
-  "dataEmprestimo": "2024-01-18",
-  "dataDeVolucaoPrevista": "2024-02-15",
+  "dataEmprestimo": "2026-01-18",
+  "dataDeVolucaoPrevista": "2026-02-15",
   "dataDeVolucaoReal": null,
   "status": "ATIVO",
   "observacoes": null,
@@ -357,8 +357,8 @@ GET /api/relatorios/livros-emprestados
     "usuarioId": 1,
     "usuarioNome": "João Silva",
     "usuarioEmail": "joao.silva@example.com",
-    "dataEmprestimo": "2024-01-18",
-    "dataDeVolucaoPrevista": "2024-02-01",
+    "dataEmprestimo": "2026-01-18",
+    "dataDeVolucaoPrevista": "2026-02-01",
     "diasRestantes": 14,
     "estaAtrasado": false,
     "diasAtrasados": 0
@@ -415,14 +415,14 @@ GET /api/relatorios/livros-por-categoria
 
 ### 5. Atividade em Período
 ```http
-GET /api/relatorios/atividade-periodo?dataInicio=2024-01-01&dataFim=2024-01-31
+GET /api/relatorios/atividade-periodo?dataInicio=2026-01-01&dataFim=2026-01-31
 ```
 
 **Resposta**:
 ```json
 {
-  "dataInicio": "2024-01-01",
-  "dataFim": "2024-01-31",
+  "dataInicio": "2026-01-01",
+  "dataFim": "2026-01-31",
   "totalEmprestimos": 10,
   "totalDevolucoes": 8,
   "emprestimoAtrasados": 1,
@@ -508,7 +508,7 @@ curl -H "Authorization: Bearer TOKEN" \
 1. **Use Postman ou Insomnia**: Esses clientes HTTP facilitam testes
 2. **Importe do Swagger**: Copie a URL `http://localhost:8080/api/v3/api-docs` no Postman
 3. **Teste com paginação**: Sempre use `page=0&size=10` para resultados grandes
-4. **Verifique timestamps**: Datas estão em ISO-8601 (2024-01-18T10:30:00)
+4. **Verifique timestamps**: Datas estão em ISO-8601 (2026-01-18T10:30:00)
 5. **Testes de carga**: Use `apache-bench` ou `wrk` para testes de performance
 
 ---
@@ -554,4 +554,4 @@ echo "✅ Dados de teste criados!"
 
 ---
 
-**Última atualização**: Janeiro 2024
+**Última atualização**: Janeiro 2026

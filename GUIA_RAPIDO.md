@@ -335,7 +335,7 @@ docker-compose ps
 ### Código
 - 🐙 GitHub: https://github.com/rcoura82/fase2_subst_9adjt
 - 📝 Issues: Abra uma issue para perguntas
-- 👤 Autor: Raphael Coura (@rcoura82)
+- 👤 Autor: Ricardo Coura (@rcoura82)
 
 ---
 
@@ -370,6 +370,6 @@ chmod +x init.sh
 **Projeto**: Sistema de Biblioteca Online  
 **Versão**: 1.0.0  
 **Status**: ✅ Pronto para Produção  
-**Data**: Janeiro 2024  
+**Data**: Janeiro 2026  
 
 🎓 **Bom desenvolvimento!**

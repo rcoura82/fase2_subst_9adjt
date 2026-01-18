@@ -435,7 +435,7 @@ curl -X POST http://localhost:8080/api/emprestimos \
 
 - **GitHub**: https://github.com/rcoura82/fase2_subst_9adjt
 - **Issues**: https://github.com/rcoura82/fase2_subst_9adjt/issues
-- **Autor**: Raphael Coura (@rcoura82)
+- **Autor**: Ricardo Coura (@rcoura82)
 
 ---
 
@@ -460,6 +460,6 @@ curl -X POST http://localhost:8080/api/emprestimos \
 
 **Projeto concluído com sucesso!** 🎉
 
-**Data de conclusão**: Janeiro 2024  
+**Data de conclusão**: Janeiro 2026  
 **Versão**: 1.0.0  
 **Status**: ✅ Pronto para Produção

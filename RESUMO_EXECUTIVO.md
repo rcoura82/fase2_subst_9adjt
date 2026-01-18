@@ -3,7 +3,7 @@
 ## SISTEMA DE BIBLIOTECA ONLINE - FASE 2
 
 **Desenvolvido em**: Java 21 + Spring Boot 3.2  
-**Data de Conclusão**: Janeiro 2024  
+**Data de Conclusão**: Janeiro 2026  
 **Status**: ✅ **COMPLETO E PRONTO PARA PRODUÇÃO**
 
 ---
@@ -369,7 +369,7 @@ docker-compose up -d --scale app=3
 ### Contato
 - 🐙 GitHub: https://github.com/rcoura82/fase2_subst_9adjt
 - 📧 Issues: https://github.com/rcoura82/fase2_subst_9adjt/issues
-- 👤 Autor: Raphael Coura (@rcoura82)
+- 👤 Autor: Ricardo Coura (@rcoura82)
 
 ---
 
@@ -407,7 +407,7 @@ O sistema está **pronto para produção** e pode ser **facilmente deployado** e
 
 ---
 
-**Data de Conclusão**: Janeiro 2024  
+**Data de Conclusão**: Janeiro 2026  
 **Status**: ✅ **COMPLETO**  
 **Versão**: 1.0.0  
 

@@ -143,7 +143,7 @@ GET /api/relatorios/top-20-livros-emprestados
 GET /api/relatorios/livros-emprestados
 GET /api/relatorios/emprestimos-por-usuario
 GET /api/relatorios/livros-por-categoria
-GET /api/relatorios/atividade-periodo?dataInicio=2024-01-01&dataFim=2024-12-31
+GET /api/relatorios/atividade-periodo?dataInicio=2026-01-01&dataFim=2026-12-31
 ```
 
 ## 🌐 URLs de Acesso
@@ -305,7 +305,7 @@ Este projeto está sob a licença MIT.
 
 **Status**: ✅ Pronto para Produção  
 **Versão**: 1.0.0  
-**Data**: Janeiro 2024  
+**Data**: Janeiro 2026  
 **Java**: 21 LTS  
 **Spring Boot**: 3.2.0  
 

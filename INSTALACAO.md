@@ -184,7 +184,7 @@ java -jar target/biblioteca-online-1.0.0.jar
 
 ```
 ........ (mais linhas de log)
-2024-01-18 10:30:45.123  INFO 12345 --- [           main] 
+2026-01-18 10:30:45.123  INFO 12345 --- [           main] 
 c.b.BibliotecaOnlineApplication         : Started BibliotecaOnlineApplication 
 in 4.532 seconds (JVM running for 4.892)
 ```
@@ -412,4 +412,4 @@ echo "✅ Todos os testes passaram!"
 
 ---
 
-**Última atualização**: Janeiro 2024
+**Última atualização**: Janeiro 2026

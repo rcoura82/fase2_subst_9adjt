@@ -4,7 +4,7 @@
 
 **Instituição**: Desafio de Desenvolvimento Java  
 **Projeto**: Biblioteca Online com APIs, Persistência de Dados e Escalabilidade  
-**Data**: Janeiro 2024  
+**Data**: Janeiro 2026  
 **Versão**: 1.0.0
 
 ---
@@ -287,7 +287,7 @@ GET /api/relatorios/livros-por-categoria
 
 #### 5.5 Atividade em Período
 ```
-GET /api/relatorios/atividade-periodo?dataInicio=2024-01-01&dataFim=2024-01-31
+GET /api/relatorios/atividade-periodo?dataInicio=2026-01-01&dataFim=2026-01-31
 ```
 - Total de empréstimos e devoluções
 - Taxa de atrasos
@@ -697,8 +697,8 @@ curl -X POST http://localhost:8080/api/emprestimos \
   }'
 
 # Resposta: Empréstimo criado para 14 dias
-# dataEmprestimo: 2024-01-18
-# dataDeVolucaoPrevista: 2024-02-01
+# dataEmprestimo: 2026-01-18
+# dataDeVolucaoPrevista: 2026-02-01
 ```
 
 ---
@@ -746,10 +746,10 @@ O sistema está **pronto para produção** e pode ser **facilmente escalado** co
 
 - **GitHub**: https://github.com/rcoura82/fase2_subst_9adjt
 - **Issues**: https://github.com/rcoura82/fase2_subst_9adjt/issues
-- **Autor**: Raphael Coura (@rcoura82)
+- **Autor**: Ricardo Coura (@rcoura82)
 
 ---
 
-**Documento Gerado**: Janeiro 2024  
+**Documento Gerado**: Janeiro 2026  
 **Versão**: 1.0.0  
 **Status**: ✅ Completo e Pronto para Entrega
